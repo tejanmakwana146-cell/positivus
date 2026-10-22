@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+    <link href="./assets/bootstrap/AOS.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>document</title>
+</head>
+
+<body>
+
+    <!-- ================= Navbar ================= -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg top-padding">
+                        <div class="container-fluid">
+                            <img src="./assets/image/Logo.png" class="img-fluid" alt="Positivus">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav ms-lg-auto gap-lg-4 align-items-lg-center">
+                                    <a class="nav-link active" aria-current="page" href="#">About us</a>
+                                    <a class="nav-link" href="#">Services</a>
+                                    <a class="nav-link" href="#">Use Cases</a>
+                                    <a class="nav-link" href="#">Pricing</a>
+                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link request-quote" href="#">Request a quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 1: Hero ================= -->
+    <section class="section-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="800"
+                    data-aos-easing="ease-in-sine">
+                    <h1 class="text-heading">Navigating the digital landscape for success</h1>
+                    <p class="sub-text">Our digital marketing agency helps businesses grow and succeed online through a
+                        range of services including SEO, PPC, social media marketing, and content creation.</p>
+                    <a href="#" class="btn btn-dark px-4 py-2">Book a consultation</a>
+                </div>
+
+                <div class="col-md-6 col-12" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./assets/image/section-1-image.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 2: Client logos (auto-scrolling) ================= -->
+<section>
+    <div class="container">
+        <div class="logo-marquee" data-aos="zoom-out-down" data-aos-duration="1000">
+            <div class="logo-track">
+
+                <!-- Logo set 1 -->
+                <div class="logo-group">
+                    <a href="#"><img src="./assets/image/amazon-logo.png" alt="Amazon"></a>
+                    <a href="#"><img src="./assets/image/dribbble-logo.png" alt="Dribbble"></a>
+                    <a href="#"><img src="./assets/image/hubspot-logo.png" alt="HubSpot"></a>
+                    <a href="#"><img src="./assets/image/notion-logo.png" alt="Notion"></a>
+                    <a href="#"><img src="./assets/image/netflix.png" alt="Netflix"></a>
+                    <a href="#"><img src="./assets/image/zoom.png" alt="Zoom"></a>
+                </div>
+
+                <!-- Logo set 2 (exact duplicate, makes the loop seamless) -->
+                <div class="logo-group" aria-hidden="true">
+                    <a href="#" tabindex="-1"><img src="./assets/image/amazon-logo.png" alt=""></a>
+                    <a href="#" tabindex="-1"><img src="./assets/image/dribbble-logo.png" alt=""></a>
+                    <a href="#" tabindex="-1"><img src="./assets/image/hubspot-logo.png" alt=""></a>
+                    <a href="#" tabindex="-1"><img src="./assets/image/notion-logo.png" alt=""></a>
+                    <a href="#" tabindex="-1"><img src="./assets/image/netflix.png" alt=""></a>
+                    <a href="#" tabindex="-1"><img src="./assets/image/zoom.png" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ================= Section 3: Services heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1000">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Services</p>
+                </a>
+                <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed
+                    online. These services include:</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 4: Services cards (row 1) ================= -->
+    <section>
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Card: SEO -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card card-light h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-green">Search engine<br></span>
+                                    <span class="hl hl-green">optimization</span>
+                                </h5>
+                                <a href="#" class="learn-more d-flex align-items-center gap-3 text-decoration-none">
+                                    <img src="./assets/image/learn-more-icon-green.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-1.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: PPC -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card card-green h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-white">Pay-per-click<br></span>
+                                    <span class="hl hl-white">advertising</span>
+                                </h5>
+                                <a href="#" class="learn-more d-flex align-items-center gap-3 text-decoration-none">
+                                    <img src="./assets/image/learn-more-icon-green.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-2.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 4: Services cards (row 2) ================= -->
+    <section>
+        <div class="container">
+            <div class="row g-4 card-gap">
+
+                <!-- Card: Social media -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card card-dark h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-white">Social Media<br></span>
+                                    <span class="hl hl-white">Marketing</span>
+                                </h5>
+                                <a href="#"
+                                    class="learn-more d-flex align-items-center gap-3 text-decoration-none text-color-white">
+                                    <img src="./assets/image/learn-more-icon-white.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-3.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Email marketing -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-green">Email<br></span>
+                                    <span class="hl hl-green">Marketing</span>
+                                </h5>
+                                <a href="#" class="learn-more d-flex align-items-center gap-3 text-decoration-none">
+                                    <img src="./assets/image/learn-more-icon-green.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-4.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 4: Services cards (row 3) ================= -->
+    <section>
+        <div class="container">
+            <div class="row g-4 card-gap">
+
+                <!-- Card: Content creation -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card card-green h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-white">Content<br></span>
+                                    <span class="hl hl-white">Creation</span>
+                                </h5>
+                                <a href="#" class="learn-more d-flex align-items-center gap-3 text-decoration-none">
+                                    <img src="./assets/image/learn-more-icon-green.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-5.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Analytics -->
+                <div class="col-md-6 col-12" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card service-card card-dark h-100">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex flex-column justify-content-between">
+                                <h5 class="card-title">
+                                    <span class="hl hl-white">Analytics and <br></span>
+                                    <span class="hl hl-white">Tracking</span>
+                                </h5>
+                                <a href="#"
+                                    class="learn-more d-flex align-items-center gap-3 text-decoration-none text-color-white">
+                                    <img src="./assets/image/learn-more-icon-white.png" alt=""> Learn more
+                                </a>
+                            </div>
+                            <img src="./assets/image/card-image-6.png" class="img-fluid align-self-center" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 5: CTA banner ================= -->
+    <section>
+        <div class="container">
+            <div class="row background" data-aos="zoom-in" data-aos-duration="1250">
+                <div class="col-md-6 col-12 align-self-center">
+                    <p class="heading">Let’s make things happen</p>
+                    <p>Contact us today to learn more about how our digital marketing services can help your business
+                        grow and succeed online.</p>
+                    <a href="#" class="get-buttom">Get your free proposal</a>
+                </div>
+                <div class="col-md-6 col-12">
+                    <img src="./assets/image/section-5.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 6: Case studies heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1500">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Case Studies</p>
+                </a>
+                <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Case studies table ================= -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-down" data-aos-duration="1500">
+                    <div class="table-box">
+
+                        <div class="table-item">
+                            <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50%
+                                increase in website traffic and a 25% increase in sales.</p>
+                            <a href="#" class="table-link">
+                                Learn more
+                                <img src="./assets/image/learn-icon.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="table-item">
+                            <p>For a B2B software company, we developed an SEO strategy that resulted in a first page
+                                ranking for key keywords and a 200% increase in organic traffic.</p>
+                            <a href="#" class="table-link">
+                                Learn more
+                                <img src="./assets/image/learn-icon.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="table-item">
+                            <p>For a national retail chain, we created a social media marketing campaign that increased
+                                followers by 25% and generated a 20% increase in online sales.</p>
+                            <a href="#" class="table-link">
+                                Learn more
+                                <img src="./assets/image/learn-icon.png" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Working process heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1500">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Our Working Process</p>
+                </a>
+                <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- ================= Section 7: Working process accordion ================= -->
+<section>
+    <div class="container">
+        <div class="accordion custom-accordion" id="processAccordion">
+
+            <!-- Item 1 (open by default) -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process1" aria-expanded="true" aria-controls="process1">
+                        <span class="number">01</span>
+                        <span class="title">Consultation</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process1" class="accordion-collapse collapse show" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        During the initial consultation, we will discuss your business goals and objectives,
+                        target audience, and current marketing efforts. This will allow us to understand your
+                        needs and tailor our services to best fit your requirements.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process2" aria-expanded="false" aria-controls="process2">
+                        <span class="number">02</span>
+                        <span class="title">Research and Strategy Development</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process2" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        Add your Research and Strategy Development text here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process3" aria-expanded="false" aria-controls="process3">
+                        <span class="number">03</span>
+                        <span class="title">Implementation</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process3" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        Add your Implementation text here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process4" aria-expanded="false" aria-controls="process4">
+                        <span class="number">04</span>
+                        <span class="title">Monitoring and Optimization</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process4" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        Add your Monitoring and Optimization text here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process5" aria-expanded="false" aria-controls="process5">
+                        <span class="number">05</span>
+                        <span class="title">Reporting and Communication</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process5" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        Add your Reporting and Communication text here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="accordion-item" data-aos="flip-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#process6" aria-expanded="false" aria-controls="process6">
+                        <span class="number">06</span>
+                        <span class="title">Continual Improvement</span>
+                        <img src="./assets/image/plus-icon.png" class="icon icon-plus" alt="">
+                        <img src="./assets/image/minus-icon.png" class="icon icon-minus" alt="">
+                    </button>
+                </h2>
+                <div id="process6" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                    <div class="accordion-body">
+                        Add your Continual Improvement text here.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- ================= Section 8: Team heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1500">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Team</p>
+                </a>
+                <p>Meet the skilled and experienced team behind our successful digital marketing strategies</p>
+            </div>
+        </div>
+    </section>
+
+ <!-- ================= Section 9: Team cards (all 6 in one row) ================= -->
+<section>
+    <div class="container">
+        <div class="row g-4 team-row">
+
+            <!-- Member 1 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-1.png" alt="John Smith">
+                        <div class="team-info">
+                            <h5 class="member-name">John Smith</h5>
+                            <p class="member-role">CEO and Founder</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">10+ years of experience in digital marketing. Expertise in SEO, PPC, and
+                        content strategy</p>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-2.png" alt="Jane Doe">
+                        <div class="team-info">
+                            <h5 class="member-name">Jane Doe</h5>
+                            <p class="member-role">Director of Operations</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">7+ years of experience in project management and team leadership. Strong
+                        organizational and communication skills</p>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-3.png" alt="Michael Brown">
+                        <div class="team-info">
+                            <h5 class="member-name">Michael Brown</h5>
+                            <p class="member-role">Senior SEO Specialist</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">5+ years of experience in SEO and content creation. Proficient in keyword
+                        research and on-page optimization</p>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-4.png" alt="Emily Johnson">
+                        <div class="team-info">
+                            <h5 class="member-name">Emily Johnson</h5>
+                            <p class="member-role">PPC Manager</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">10+ years of experience in digital marketing. Expertise in SEO, PPC, and
+                        content strategy</p>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-5.png" alt="Brian Williams">
+                        <div class="team-info">
+                            <h5 class="member-name">Brian Williams</h5>
+                            <p class="member-role">Social Media Specialist</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">7+ years of experience in project management and team leadership. Strong
+                        organizational and communication skills</p>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="team-card h-100">
+                    <div class="team-top">
+                        <img src="./assets/image/team-member-6.png" alt="Sarah Kim">
+                        <div class="team-info">
+                            <h5 class="member-name">Sarah Kim</h5>
+                            <p class="member-role">Content Creator</p>
+                        </div>
+                        <a href="#" class="linkedin-icon">
+                            <img src="./assets/image/Social-icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <hr class="team-divider">
+                    <p class="team-text">5+ years of experience in SEO and content creation. Proficient in keyword
+                        research and on-page optimization</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- ================= Section 10: See all team button ================= -->
+    <section>
+        <div class="container">
+            <div class="row text-end">
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1500">
+                    <a href="#" class="see-all">See all team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 11: Testimonials heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1500">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Testimonials</p>
+                </a>
+                <p>Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing
+                    Services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Section 12: Testimonials carousel ================= -->
+    <section>
+        <div class="container">
+            <div id="testimonialCarousel" class="carousel slide testimonial-box" data-bs-ride="false"
+                data-aos="flip-down" data-aos-duration="1200">
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-bubble">
+                            <p>"We have been working with Positivus for the past year and have seen a significant
+                                increase in website traffic and leads as a result of their efforts. The team is
+                                professional, responsive, and truly cares about the success of our business. We highly
+                                recommend Positivus to any company looking to grow their online presence."</p>
+                        </div>
+                        <h6 class="client-name">John Smith</h6>
+                        <p class="client-role">Marketing Director at XYZ Corp</p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-bubble">
+                            <p>"We have been working with Positivus for the past year and have seen a significant
+                                increase in website traffic and leads as a result of their efforts. The team is
+                                professional, responsive, and truly cares about the success of our business. We highly
+                                recommend Positivus to any company looking to grow their online presence."</p>
+                        </div>
+                        <h6 class="client-name">Jane Doe</h6>
+                        <p class="client-role">CEO at ABC Ltd</p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-bubble">
+                            <p>"We have been working with Positivus for the past year and have seen a significant
+                                increase in website traffic and leads as a result of their efforts. The team is
+                                professional, responsive, and truly cares about the success of our business. We highly
+                                recommend Positivus to any company looking to grow their online presence."</p>
+                        </div>
+                        <h6 class="client-name">Michael Brown</h6>
+                        <p class="client-role">Founder at DEF Inc</p>
+                    </div>
+                </div>
+
+                <!-- Controls: prev arrow | dots | next arrow (one flex row) -->
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= Section 13: Contact heading ================= -->
+    <section>
+        <div class="container">
+            <div class="section-heading" data-aos="zoom-in-right" data-aos-duration="1500">
+                <a href="#" class="text-decoration-none">
+                    <p class="services-box">Contact Us</p>
+                </a>
+                <p>Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
+            </div>
+        </div>
+    </section>
+
+<!-- ================= Section 14: Contact form ================= -->
+<section>
+    <div class="container">
+        <div class="contact-box" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 col-12">
+                    <form class="contact-form">
+
+                        <div class="d-flex gap-4 mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contactType" id="sayHi"
+                                    value="hi" checked>
+                                <label class="form-check-label" for="sayHi">Say Hi</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contactType" id="getQuote"
+                                    value="quote">
+                                <label class="form-check-label" for="getQuote">Get a Quote</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message*</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Message"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="send-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="./assets/image/form-decoration.png" class="img-fluid d-block ms-auto" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-box" data-aos="fade-up" data-aos-duration="1500">
+
+                <!-- Top row: logo, links, social icons -->
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-3 col-12 text-center text-lg-start">
+                        <a href="#"><img src="./assets/image/white-logo.png" alt="Positivus"
+                                class="img-fluid footer-logo"></a>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <ul
+                            class="footer-links list-unstyled d-flex flex-wrap justify-content-center gap-3 gap-lg-4 mb-0">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Use Cases</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12">
+                        <div class="footer-social d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="#" aria-label="LinkedIn"><img src="./assets/image/linkedin-icon.png"
+                                    alt="LinkedIn"></a>
+                            <a href="#" aria-label="Facebook"><img src="./assets/image/facebook-icon.png"
+                                    alt="Facebook"></a>
+                            <a href="#" aria-label="Twitter"><img src="./assets/image/twitter-icon.png"
+                                    alt="Twitter"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle row: contact info + newsletter -->
+                <div class="row gy-4 footer-middle">
+                    <div class="col-lg-5 col-12">
+                        <p class="contact-tag">Contact us:</p>
+                        <p class="footer-text">Email: info@positivus.com</p>
+                        <p class="footer-text">Phone: 555-567-8901</p>
+                        <p class="footer-text">Address: 1234 Main St<br>Moonstone City, Stardust State 12345</p>
+                    </div>
+
+                    <div class="col-lg-7 col-12">
+                        <form class="newsletter-box">
+                            <input type="email" class="newsletter-input" placeholder="Email" aria-label="Email">
+                            <button type="submit" class="newsletter-btn">Subscribe to news</button>
+                        </form>
+                    </div>
+                </div>
+
+                <hr class="footer-divider">
+
+                <!-- Bottom row: copyright -->
+                <div class="footer-bottom d-flex flex-column flex-md-row gap-2 gap-md-4">
+                    <p class="mb-0">© 2023 Positivus. All Rights Reserved.</p>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/bootstrap/bootstrap.js"></script>
+    <script src="./assets/bootstrap/AOS.js"></script>
+    <script>
+    AOS.init({
+        once: true,
+        disable: function () {
+            return window.innerWidth < 768;
+        }
+    });
+</script>
+</body>
+
+</html>

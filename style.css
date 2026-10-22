@@ -1,0 +1,1161 @@
+/* =========================================================
+   TABLE OF CONTENTS (same order as the HTML)
+   0.  Global + Shared (section heading, card spacing)
+   1.  Navbar
+   2.  Hero
+   3.  Client logos marquee
+   4.  Services heading        (uses shared .section-heading)
+   5.  Services cards
+   6.  CTA banner
+   7.  Case studies heading    (uses shared .section-heading)
+   8.  Case studies table
+   9.  Working process heading (uses shared .section-heading)
+   10. Working process accordion
+   11. Team heading            (uses shared .section-heading)
+   12. Team cards
+   13. See all team button
+   14. Testimonials heading    (uses shared .section-heading)
+   15. Testimonials carousel
+   16. Contact heading         (uses shared .section-heading)
+   17. Contact form
+   18. Footer
+
+   Breakpoints used (max-width): 991px, 767px, 575px
+   Each section keeps its own responsive rules at the bottom.
+   ========================================================= */
+
+
+/* =========================================================
+   0. GLOBAL
+   ========================================================= */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   0. SHARED
+   ========================================================= */
+
+/* Vertical gap between rows of cards (services + team) */
+.card-gap {
+    margin-top: 40px;
+}
+
+/* Section heading: green label + description text */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.section-heading p {
+    margin: 0;
+    max-width: 580px;
+}
+
+.section-heading .services-box {
+    flex-shrink: 0;
+}
+
+
+/* Green label box used inside .section-heading */
+.services-box {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #B9FF66;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 0 8px;
+    white-space: nowrap;
+    color: black;
+}
+
+@media (max-width: 991px) {
+    .section-heading {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .services-box {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    .card-gap {
+        margin-top: 0;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .services-box {
+        padding: 0 10px;
+        font-size: 28px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 575px) {
+    .services-box {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   1. NAVBAR
+   ========================================================= */
+.top-padding {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.request-quote {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        gap: 10px;
+        align-items: center;      
+        text-align: center;
+    }
+
+    .request-quote {
+        display: inline-block;
+        align-self: center;     
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-padding {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .request-quote {
+        padding: 8px 16px;
+    }
+}
+
+/* =========================================================
+   2. HERO
+   ========================================================= */
+.section-1 {
+    padding: 40px 0;
+}
+
+.text-heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    .text-heading {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-1 {
+        padding: 20px 0;
+    }
+
+    .text-heading {
+        font-size: 30px;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 575px) {
+    .text-heading {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   3. CLIENT LOGOS MARQUEE
+   ========================================================= */
+.logo-marquee {
+    overflow: hidden;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    width: max-content;
+    animation: logo-scroll 25s linear infinite;
+}
+
+/* pause on hover */
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+.logo-group img:hover {
+    transform: scale(1.5);
+}
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding-right: 70px;
+    /* same as gap so the loop has no jump */
+}
+
+/* every logo gets the same box, so sizes look even */
+.logo-group img {
+    width: 140px;
+    height: 50px;
+    object-fit: contain;
+    max-width: none;
+    transition: transform 0.5s ease;
+}
+
+/* extra control for the Amazon logo: change the height until it looks balanced */
+.logo-group img.logo-amazon {
+    width: auto;
+    height: 30px;
+}
+
+@keyframes logo-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-group {
+        gap: 40px;
+        padding-right: 40px;
+    }
+
+    .logo-group img {
+        width: 100px;
+        height: 36px;
+    }
+
+    .logo-group img.logo-amazon {
+        width: auto;
+        height: 22px;
+    }
+
+    .logo-track {
+        animation-duration: 18s;
+    }
+}
+
+/* respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+    .logo-track {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   5. SERVICES CARDS
+   ========================================================= */
+.service-card {
+    border: 1px solid #191A23;
+    border-radius: 45px;
+    box-shadow: 0 5px 0 #191A23;
+    min-height: 310px;
+}
+
+.service-card .card-body {
+    padding: 40px;
+}
+
+.service-card .card-title {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* Card background colours */
+.card-light {
+    background-color: #F3F3F3;
+}
+
+.card-green {
+    background-color: #B9FF66;
+}
+
+.card-dark {
+    background-color: #191A23;
+}
+
+/* Highlighted title text */
+.hl {
+    padding: 0 7px;
+    border-radius: 7px;
+    color: #000;
+}
+
+.hl-green {
+    background-color: #B9FF66;
+}
+
+.hl-white {
+    background-color: #fff;
+}
+
+/* "Learn more" links */
+.learn-more {
+    color: #000;
+}
+
+.text-color-white {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .service-card {
+        min-height: auto;
+        border-radius: 35px;
+    }
+
+    .service-card .card-body {
+        padding: 28px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-card .card-body > div {
+        min-width: 0;
+        gap: 20px;
+    }
+
+    .service-card .card-title {
+        font-size: 22px;
+    }
+
+    .learn-more {
+        white-space: nowrap;
+    }
+
+    .service-card .card-body > img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-card {
+        border-radius: 30px;
+    }
+
+    .service-card .card-body {
+        padding: 24px;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .service-card .card-body > div {
+        gap: 0;
+    }
+
+    .service-card .card-title {
+        font-size: 20px;
+    }
+
+    .service-card .card-body > img {
+        width: auto;
+        max-width: 45%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-card .card-body {
+        padding: 20px;
+    }
+
+    .service-card .card-title {
+        font-size: 18px;
+    }
+
+    .learn-more {
+        font-size: 15px;
+    }
+
+    .service-card .card-body > img {
+        max-width: 38%;
+    }
+}
+
+
+/* =========================================================
+   6. CTA BANNER
+   ========================================================= */
+.background {
+    margin-top: 100px;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.get-buttom {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+    .background {
+        margin-top: 70px;
+        padding: 30px 20px;
+    }
+
+    .background img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .background {
+        margin-top: 50px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   8. CASE STUDIES TABLE
+   ========================================================= */
+.table-box {
+    background-color: #191A23;
+    border-radius: 45px;
+    padding: 60px 50px;
+    display: flex;
+    margin-bottom: 140px;
+}
+
+.table-item {
+    padding: 0 50px;
+    border-right: 1px solid #B9B9B9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table-item:first-child {
+    padding-left: 0;
+}
+
+.table-item:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.table-item p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.table-link {
+    color: #B9FF66;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.table-link:hover {
+    color: #B9FF66;
+}
+
+@media (max-width: 991px) {
+    .table-box {
+        flex-direction: column;
+        padding: 40px 35px;
+        margin-bottom: 80px;
+        border-radius: 35px;
+    }
+
+    /* Items stack vertically: swap right border for bottom border */
+    .table-item,
+    .table-item:first-child,
+    .table-item:last-child {
+        padding: 25px 0;
+        border-right: 0;
+        border-bottom: 1px solid #B9B9B9;
+    }
+
+    .table-item:first-child {
+        padding-top: 0;
+    }
+
+    .table-item:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .table-box {
+        padding: 30px 25px;
+        border-radius: 30px;
+        margin-bottom: 60px;
+    }
+
+    .table-link {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   10. WORKING PROCESS ACCORDION
+   ========================================================= */
+.number {
+    font-size: 45px;
+}
+
+.title {
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+.custom-accordion .accordion-item {
+    background: #f3f3f3;
+    border: 1px solid black;
+    box-shadow: 0 4px 0 black;
+    border-radius: 45px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.accordion-body,
+.accordion-header {
+    background-color: #B9FF66;
+}
+
+/* Keep the open item green and remove Bootstrap's default shadow */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #B9FF66;
+    box-shadow: none;
+}
+
+/* Hide Bootstrap's default arrow, the icons are now real images in the HTML */
+.custom-accordion .accordion-button::after {
+    display: none;
+}
+
+/* Icon on the right side of the button */
+.custom-accordion .icon {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+
+/* Open item: show minus, hide plus */
+.custom-accordion .icon-plus {
+    display: none;
+}
+
+.custom-accordion .icon-minus {
+    display: block;
+}
+
+/* Closed item: show plus, hide minus */
+.custom-accordion .accordion-button.collapsed .icon-plus {
+    display: block;
+}
+
+.custom-accordion .accordion-button.collapsed .icon-minus {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .number {
+        font-size: 42px;
+    }
+
+    .title {
+        font-size: 22px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-accordion .accordion-item {
+        border-radius: 30px;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        font-size: 34px;
+    }
+
+    .title {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .custom-accordion .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* =========================================================
+   12. TEAM CARDS
+========================================================= */
+.team-row {
+    row-gap: 40px;            /* vertical gap between the rows of cards */
+}
+
+.team-card {
+    background-color: #fff;
+    border: 1px solid #191A23;
+    border-radius: 45px;
+    box-shadow: 0 5px 0 #191A23;
+    padding: 35px 30px 40px;
+}
+
+.team-top {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.team-top > img:first-child {
+    flex-shrink: 0;           /* keeps the photo from squishing in narrow cards */
+}
+
+.team-info {
+    padding-bottom: 8px;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.member-role {
+    font-size: 16px;
+    margin: 0;
+}
+
+.linkedin-icon {
+    display: flex;
+    margin-left: auto;      
+    flex-shrink: 0;
+}
+
+.team-divider {
+    border: 0;
+    border-top: 1px solid #191A23;
+    margin: 25px 0;
+}
+
+.team-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .team-card {
+        padding: 30px 28px 35px;
+    }
+
+    .team-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-row {
+        row-gap: 0;         
+    }
+
+    .team-card {
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .team-card {
+        padding: 25px 20px 30px;
+    }
+
+    .team-text {
+        font-size: 15px;
+    }
+
+    .team-divider {
+        margin: 18px 0;
+    }
+}
+
+/* =========================================================
+   13. SEE ALL TEAM BUTTON
+   ========================================================= */
+.see-all {
+    border-radius: 15px;
+    background-color: black;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 11px 29px;
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .see-all {
+        display: block;
+        text-align: center;
+        padding: 16px 20px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+}
+
+
+/* =========================================================
+   15. TESTIMONIALS CAROUSEL
+   ========================================================= */
+.testimonial-box {
+    width: 1240px;
+    max-width: 100%;
+    height: 450px;
+    background-color: #191A23;
+    border-radius: 45px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Green box around the testimonial text only (name and role sit outside it) */
+.testimonial-bubble {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    border: 1px solid #B9FF66;
+    border-radius: 30px;
+}
+
+.testimonial-bubble p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.client-name,
+.client-role {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.client-name {
+    color: #B9FF66;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.client-role {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Controls row: arrow | dots | arrow, centered at the bottom */
+.carousel-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.carousel-controls .carousel-indicators,
+.carousel-controls .carousel-control-prev,
+.carousel-controls .carousel-control-next {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* Dots */
+.carousel-indicators [data-bs-target] {
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    background-color: #B9FF66;
+}
+
+@media (max-width: 767px) {
+    .testimonial-box {
+        height: auto;
+        min-height: 450px;
+        padding: 40px 45px 90px;
+        border-radius: 30px;
+    }
+
+    .testimonial-bubble {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .testimonial-bubble p {
+        font-size: 15px;
+    }
+
+    .carousel-controls {
+        bottom: 25px;
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   17. CONTACT FORM
+   ========================================================= */
+.contact-box {
+    background-color: #F3F3F3;
+    border-radius: 45px;
+    padding: 50px 0 50px 70px;   
+    overflow: hidden;
+}
+
+.contact-form .form-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contact-form .form-control {
+    background-color: #fff;
+    border: 1px solid #191A23;
+    border-radius: 14px;
+    padding: 15px 26px;
+    box-shadow: none;
+}
+
+.contact-form .form-control::placeholder {
+    color: #9a9a9a;
+}
+
+.contact-form .form-control:focus {
+    border-color: #191A23;
+    box-shadow: none;
+}
+
+.contact-form textarea.form-control {
+    resize: none;
+    min-height: 175px;
+}
+
+/* Custom round radio buttons (Say Hi / Get a Quote) */
+.contact-form .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form .form-check-input {
+    -webkit-appearance: none;
+    appearance: none;
+    float: none;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #191A23;
+    border-radius: 50%;
+    background-color: #fff;
+    background-image: none;
+    cursor: pointer;
+}
+
+.contact-form .form-check-input:checked {
+    background-color: #B9FF66;
+    border-color: #191A23;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+.contact-form .form-check-input:focus,
+.contact-form .form-check-input:active {
+    box-shadow: inset 0 0 0 6px #fff;
+    outline: none;
+}
+
+.contact-form .form-check-input:not(:checked):focus,
+.contact-form .form-check-input:not(:checked):active {
+    box-shadow: none;
+}
+
+.contact-form .form-check-label {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Submit button */
+.send-btn {
+    display: block;
+    width: 100%;
+    background-color: #191A23;
+    color: #fff;
+    border: 0;
+    border-radius: 14px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .contact-box {
+        padding: 40px 35px;
+        border-radius: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-box {
+        padding: 30px 20px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-box {
+        padding: 25px 16px;
+    }
+}
+
+
+/* =========================================================
+   18. FOOTER
+   ========================================================= */
+.site-footer {
+    margin-top: 100px;
+}
+
+.footer-box {
+    background-color: #191A23;
+    border-radius: 45px 45px 0 0;
+    padding: 50px 50px;
+    color: #fff;
+}
+
+.footer-logo {
+    max-height: 30px;
+    width: auto;
+}
+
+.footer-links a,
+.footer-bottom a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+    color: #B9FF66;
+}
+
+.footer-social img {
+    width: 26px;
+    height: 26px;
+}
+
+/* Contact info + newsletter row */
+.footer-middle {
+    margin-top: 40px;
+}
+
+.contact-tag {
+    display: inline-block;
+    background-color: #B9FF66;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 7px;
+    padding: 0 7px;
+    margin-bottom: 25px;
+}
+
+.footer-text {
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.newsletter-box {
+    background-color: #292A32;
+    border-radius: 14px;
+    padding: 50px 34px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    padding: 18px 30px;
+}
+
+.newsletter-input::placeholder {
+    color: #fff;
+}
+
+.newsletter-btn {
+    flex: 1;
+    background-color: #B9FF66;
+    color: #000;
+    border: 0;
+    border-radius: 14px;
+    padding: 18px 20px;
+    white-space: nowrap;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #fff;
+    opacity: 1;
+    margin: 50px 0 40px;
+}
+
+@media (max-width: 991px) {
+    .site-footer {
+        margin-top: 70px;
+    }
+
+    .footer-box {
+        padding: 40px 30px 50px;
+        border-radius: 35px 35px 0 0;
+    }
+
+    .newsletter-box {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        margin-top: 50px;
+    }
+
+    .footer-box {
+        padding: 35px 20px 40px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .footer-middle {
+        margin-top: 30px;
+    }
+
+    .contact-tag {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .footer-text {
+        margin-bottom: 12px;
+    }
+
+    .footer-divider {
+        margin: 35px 0 25px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-links {
+        font-size: 15px;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px 18px;
+    }
+
+    .newsletter-input {
+        padding: 14px 20px;
+    }
+
+    .newsletter-btn {
+        padding: 14px 20px;
+    }
+
+}
